@@ -36,8 +36,8 @@ public class Main {
 			ThreadGroup threadGroup = new ThreadGroup("HillClimbingThreads");
 
 			for (int i = 0; i < numThreads; i++) {
-				HillClimbingSearch search = new HillClimbingSearch(n);
-				Thread thread = new Thread(threadGroup, search, "Thread-" + i);
+				HillClimbingSearch runSearch = new HillClimbingSearch(n);
+				Thread thread = new Thread(threadGroup, runSearch, "Thread-" + i);
 				thread.start();
 			}
 	
